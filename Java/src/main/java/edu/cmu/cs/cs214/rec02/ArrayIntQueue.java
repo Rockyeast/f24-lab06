@@ -9,7 +9,10 @@ import java.util.Arrays;
  *
  * TODO: This implementation contains three bugs! Use your tests to determine the
  * source of the bugs and correct them!
- *
+ * 
+ * 一个基于可调整大小数组的 {@link IntQueue} 接口实现。队列的头部从数组的头部开始，这使得队列可以在常数时间内增长和缩小。
+
+ * TODO: 该实现包含三个错误！请使用你的测试来确定错误的来源并修复它们！
  * @author Alex Lockwood
  * @author Ye Lu
  */
@@ -90,6 +93,12 @@ public class ArrayIntQueue implements IntQueue {
      * Increases the capacity of this <tt>ArrayIntQueue</tt> instance, if
      * necessary, to ensure that it can hold at least size + 1 elements.
      */
+
+    /** 
+     * 如有必要，增加此 <tt>ArrayIntQueue</tt> 实例的容量，
+     * 以确保它至少能够容纳 size + 1 个元素。 
+     */
+
     private void ensureCapacity() {
         if (size == elementData.length) {
             int oldCapacity = elementData.length;
